@@ -1,0 +1,114 @@
+
+/*Usando "*", é relacionado a tudo no css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+}
+
+header{
+    color:white;
+    text-align: center;
+    background-color: #48c5ce;
+    padding: 10px;
+}
+
+h1{
+    font-size: 26px;
+}
+
+.container{
+    max-width: 1000px; /*limita até aonde chegar o container/o titulo*/
+    margin: auto;   /*centraliza*/
+}
+
+section{
+    color: rgb(0, 0, 0);
+}
+
+#formContainer{
+    max-width: 230px; /*limitar o espaço do formulário*/
+    background: #ffffffBB;
+    padding: 20px; /*afastar das paredes internas*/
+    float: right; /*colar na parede*/
+}
+
+h2{
+    font-size: 16px;
+}
+
+.mb{
+    margin-bottom: 15px;
+}
+
+/*estilo para input e select*/
+input, select{
+    width: 100%;     /*até aonde vai as box*/
+    box-sizing: border-box;  /*as box ficam alinhadas*/
+    padding: 10px;
+    border: none; /*tira as finas bordas negras*/
+    margin-bottom: 10px;
+}
+
+/*apenas o type submit vai receber essa info*/
+input[type="submit"]{
+    color: white;
+    background-color: #48c5ce;
+    font-weight: bold;
+}
+
+section{
+    padding: 20px;
+    background-image: url(imagens/people.jpg);
+    background-size: cover;
+    overflow: hidden; /*faz a imagem preencher tudo que tem que preencher*/
+}
+
+select{
+    /*limpa aparencia de todos navegadores, vai ser usado para limpar a seta do select*/
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /*por img de outra seta*/
+    background-image: url(imagens/arrow.jpg);
+    background-repeat: no-repeat;
+    
+    /*calculo de posição*/
+    background-position-x: calc(100% - 10px);
+    background-position-y: center;
+}
+
+
+footer{
+    background-color: #202121;
+    padding: 40px;
+    text-align: center; /*alinha imagem e texto, pois estão em inline-block*/
+}
+
+#picture{
+    width: 160px;
+}
+
+.description{
+    display: inline-block;
+    color: white;
+    max-width: 40%;
+    margin-left: 40px;
+    text-align: left; /*força texto a alinhar a esquerda*/
+
+}
+
+/*so vai editar p e h3 se estiverem dentro de description*/
+.description p,.description h3{
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.description h3{
+    font-size: 18px;
+}
