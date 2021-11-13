@@ -88,28 +88,60 @@ select{
 footer{
     background-color: #202121;
     padding: 40px;
-    text-align: center; /*alinha imagem e texto, pois estão em inline-block*/
+    text-align: center; 
+    display: grid;
+    color: white;
 }
 
 #picture{
     width: 160px;
+    grid-row: 1/span 2;
+    grid-column: 1;
 }
 
-.description{
-    display: inline-block;
-    color: white;
-    max-width: 40%;
-    margin-left: 40px;
-    text-align: left; /*força texto a alinhar a esquerda*/
-
+#tittle{
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
 }
 
-/*so vai editar p e h3 se estiverem dentro de description*/
-.description p,.description h3{
-    margin-bottom: 20px;
-    margin-left: 40px;
+#text{
+    grid-row: 2;
+    grid-column: 2;
+    text-align: justify;
+    align-self: center;
+    justify-self: center;
+    padding: 1rem;
 }
 
-.description h3{
-    font-size: 18px;
+
+@media only screen and (max-width: 600px) {
+   
+    footer{
+        background-color: #202121;
+        padding: 40px;
+        text-align: center; 
+        display: grid;
+        color: white;
+    }
+    
+    #picture{
+        grid-row: 2;
+        grid-column: 1;
+        justify-self: center;
+    }
+    
+    #tittle{
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    #text{
+        grid-row: 3;
+        grid-column: 1;
+    
+    }    
+
 }
